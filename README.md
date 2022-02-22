@@ -5,7 +5,7 @@
 |     Nombre    |     Rol         | GitHub       |
 |--------------|------------- |------------- |
 |Diego Triviño	|Product Owner    |
-|Nicolas Piñeros |Developer   |[nicolaspineros](https://github.com/nicolaspineros )   |
+|Nicolas Piñeros |Scrum Master   |[nicolaspineros](https://github.com/nicolaspineros )   |
 |Juan Monroy |Developer   |[JuanoYolo](https://github.com/JuanoYolo)   |
 |Andrés Pico|Developer   |[Jandres1420](https://github.com/Jandres1420)   |
 
