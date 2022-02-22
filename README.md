@@ -2,8 +2,8 @@
 ## Arquitecturas de Software – ARSW 
 ## Integrantes
 
-|     Nombre    |     Rol         |
-|--------------|------------- |
+|     Nombre    |     Rol         | GitHub       |
+|--------------|------------- |------------- |
 |Diego Triviño	|Product Owner    |
 |Nicolas Piñeros |Developer   |[nicolaspineros](https://github.com/nicolaspineros )   |
 |Juan Monroy |Developer   |[JuanoYolo](https://github.com/JuanoYolo)   |
