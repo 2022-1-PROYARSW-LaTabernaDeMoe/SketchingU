@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://thymeleaf.org"   lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SketchUp</title>
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+<!-- Bootstrap CSS -->
+</head>    
+
+<body>
+    <div class="container">
+        <br>
+        <div>
+            <a href="/save/null" class="btn btn-primary"> Agregar</a>
+        </div>
+        <div th:switch="${list}">
+            <h2 th:case="null">No hay personas </h2>
+            <div th:case="*">
+                <h2>User</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Correo</th>
+                            <th>Contraseña</th>
+                            </th>
+                        </tr>
+                    </thead> 
+                </table>
+                <tbody>
+                    <tr th:each="persona : ${list}">
+                        <td th:text="${user.email}"></td>
+                        <td th:text="${user.contraseña}"></td>
+                    </tr>
+                </tbody>
+            </div>
+            
+        </div>    
+    </div>
+</body>
+</html>
