@@ -6,6 +6,8 @@ import javax.persistence.Id;
 
 @Entity
 public class User {
+    private String username;
+    
     @Id
     private String email;
 
