@@ -7,17 +7,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Usuario {    
+public class User {    
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String usuario;
+	private String username;
 
-    @Column
-    private String clave;
+	@Column
+	private String password;
 
     @Column
     private String rol;
@@ -30,21 +30,21 @@ public class Usuario {
         this.id = id;
     }
 
-    public String getUsuario() {
-        return usuario;
-    }
+    public String getUsername() {
+		return username;
+	}
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public String getClave() {
-        return clave;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public void setClave(String clave) {
-        this.clave = clave;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
     public String getRol() {
         return rol;

@@ -1,7 +1,6 @@
 package SketchingU.SketchingU.ServicesImpl;
 
-import SketchingU.SketchingU.Dao.UsuarioDao;
-import SketchingU.SketchingU.Model.Usuario;
+import SketchingU.SketchingU.Dao.UserDao;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -15,18 +14,19 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-@Service("usuarioDetailsService")
-public class UsuarioDetailsService implements UserDetailsService {
+@Service
+public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
-    private UsuarioDao userDao;
+    UserDao userDao;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Usuario user = userDao.findByUsuario(username);
+        SketchingU.SketchingU.Model.User appUser = userDao.findByUsername(username);
         Set<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
-        authorities.add(new SimpleGrantedAuthority(user.getRol()));
-        return new User(username, user.getClave(), authorities);
+        authorities.add(new SimpleGrantedAuthority(appUser.getRol()));
+        UserDetails user = (UserDetails) new User(appUser.getUsername(), appUser.getPassword(),authorities);
+        return user;
     }
 
 }
