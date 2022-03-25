@@ -1,13 +1,7 @@
 package SketchingU.SketchingU.Commons;
 
-import org.springframework.stereotype.Service;
+import java.io.Serializable;
 
-import java.util.List;
-
-
-public interface GenericServiceAPI<T, ID> {
-    public T save(T entity);
-    public void delete(ID id );
+public interface GenericServiceAPI<T, ID extends Serializable> {
     public T get(ID id);
-    List<T> getAllUsers();
 }
