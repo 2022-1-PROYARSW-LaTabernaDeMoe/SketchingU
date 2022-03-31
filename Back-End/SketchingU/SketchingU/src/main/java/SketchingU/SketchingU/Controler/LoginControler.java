@@ -10,4 +10,9 @@ public class LoginControler {
     public String index() {
         return "index";
     }
+
+    @GetMapping({"/menu"})
+    public String menu() {
+        return "menu";
+    }
 }

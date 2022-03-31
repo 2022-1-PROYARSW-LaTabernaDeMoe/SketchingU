@@ -1,4 +1,4 @@
-package SketchingU.SketchingU.ServicesImpl;
+package SketchingU.SketchingU.Service;
 
 import SketchingU.SketchingU.Dao.UserDao;
 

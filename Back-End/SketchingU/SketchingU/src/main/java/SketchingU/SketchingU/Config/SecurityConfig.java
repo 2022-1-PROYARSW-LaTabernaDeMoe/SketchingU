@@ -10,7 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import SketchingU.SketchingU.ServicesImpl.UserDetailsServiceImpl;
+import SketchingU.SketchingU.Service.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity
@@ -23,11 +23,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/","/index*").permitAll()		
 		.and()
 		.formLogin()
-		.loginPage("/login")
+		.loginPage("/index")
         .permitAll()
-        .defaultSuccessUrl("/save")
-        .usernameParameter("username")
-        .passwordParameter("password")
+        .defaultSuccessUrl("/menu")        
         .permitAll()
 		.and()
 		.logout().permitAll();
